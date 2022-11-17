@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: linear-gradient(90deg, #1cb5e0 0%, #000851 100%);
+  background-attachment: fixed;
+  background-origin: inital;
+  background-repeat: no repeat;
+  height: 100%;
+}
+
+.main-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.title {
+  font-size: 1.8em;
+}
+
+h2 {
+  font-size: 2em;
+  margin-bottom: 1em;
+}
+
+.title,
+h2 {
+  color: #fff;
+  font-family: "Dosis", sans-serif;
+}
+
+.container {
+  width: auto;
+  max-width: 1000px;
+  padding: 1.5em;
+  border-radius: 2em;
+  background: linear-gradient(90deg, #00d2ff 0%, #3a47d5 100%);
+  box-shadow: 13px 13px 35px rgb(48, 64, 98), -13px -13px 35px rgb(29, 96, 250);
+  display: flex;
+  justify-content: space-between;
+  color: aliceblue;
+  gap: 2em;
+}
+
+.container img {
+  width: 100%;
+  max-width: 200px;
+  display: flex;
+  transition: 0.5s;
+  user-select: none;
+  transition: animation 0.5s;
+}
+
+img {
+  -webkit-user-drag: none;
+}
+
+.container img:hover {
+  user-select: none;
+  animation: floating 2s infinite;
+  transition: animation 0.5s;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  margin: 2em;
+  font-size: 1.2em;
+  font-family: "Roboto Slab", serif;
+  font-weight: 900;
+  background: linear-gradient(90deg, #e1f9ff 0%, #eaecc6 100%);
+  -webkit-background-clip: text;
+  color: transparent;
+  user-select: none;
+}
+
+@keyframes floating {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-1em);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@media only screen and (max-width: 769px) {
+  .title, h2{
+    text-align: center;
+  }
+  /* .main-container{margin: .5em;} */
+  .container img{
+    width: 100px;
+  }
+}
+
+@media only screen and (max-width: 426px) {
+  .title, h2{
+    text-align: center;
+  }
+  .container img{
+    width: 80px;
+  }
+}
+
+@media only screen and (max-width: 376px) {
+  .title, h2{
+    text-align: center;
+  }
+  .container img{
+    width: 60px;
+  }
+}
+
+@media only screen and (max-width: 321px) {
+  .title, h2{
+    text-align: center;
+  }
+  .container img{
+    width: 40px;
+  }
+}
